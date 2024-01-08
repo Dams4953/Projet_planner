@@ -35,8 +35,18 @@ export let creationObject = () => {
     // une date d'échéance (obligatoire, par défaut "2 semaines à compter de la création", doit être une date valide)
     let idDateElement = document.getElementById('idDate');
     let idTimeElement = document.getElementById('idTime');
-    let idDateTime = new Date(idDateElement.value + 'T' + idTimeElement.value);
-    object.idDate = idDateTime.toISOString();
+    let idDateTime;
+
+    // Vérifier si une date a été saisie, sinon définir par défaut à 2 semaines
+    if (idDateElement.value) {
+        idDateTime = new Date(idDateElement.value + 'T' + idTimeElement.value);
+    } else {
+        let defaultDate = new Date();
+        defaultDate.setDate(defaultDate.getDate() + 14);
+        idDateTime = defaultDate;
+    }
+
+object.idDate = idDateTime.toISOString();
 
 
     // Mettre le tableau dans le localStorage
