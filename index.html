@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Planner</title>
     <link href="assets/style.css" rel="stylesheet">
     <script src="script/script.js" type="module" defer></script>
-</head> 
+</head>
+
 <body>
-    <input type="text" id="nom">
-    <input type="text" id="description">
-    <select id="achevement">
-        <option value="todo">TO DO</option>
-        <option value="doing">Doing</option>
-        <option value="done">Done</option>
-    </select>
-    <input type="radio" name="echance" value="24">
-    <input type="radio" name="echance" value="48">
-    <button id="confirmer">Ajouter</button>
+    <section class="top">
+        <input type="text" id="nom">
+        <input type="text" id="description">
+        <select id="achevement">
+            <option value="todo">TO DO</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
+        <input type="radio" name="echance" value="24">
+        <input type="radio" name="echance" value="48">
+        <button id="confirmer">Ajouter</button>
+    </section>
+    <section class="list">
+        <ul id="list__container">
+
+        </ul>
+    </section>
 </body>
+
 </html>
