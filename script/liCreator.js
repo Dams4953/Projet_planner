@@ -2,11 +2,18 @@ import { time } from './time.js';
 import { deleteTask } from "./delete.js";
 
 export let liCreator = () => {
-    let liContainer = document.getElementById('list__container');
     let tab = JSON.parse(localStorage.getItem('Tableau') || '[]');
-    
-
+    let liContainer;
     for (let elem of tab) {
+        if (elem.achevement == "todo"){
+            liContainer = document.getElementById('list__container__todo');
+        }
+        else if (elem.achevement == "doing"){
+            liContainer = document.getElementById('list__container__doing');
+        }
+        else if (elem.achevement == "done"){
+            liContainer = document.getElementById('list__container__done');
+        }
         let li = document.createElement('li');
         li.id = elem.id;
 
@@ -35,4 +42,3 @@ export let liCreator = () => {
          
     }
 }
-

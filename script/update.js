@@ -1,4 +1,8 @@
 // creation du popup
+import { time } from './time.js';
+import { deleteTask } from "./delete.js";
+
+
 export let modificationLiPopup = (e) => {
     let tableau = localStorage.getItem('Tableau');
     let tab = JSON.parse(tableau);
@@ -90,15 +94,41 @@ let modificationTabLi = (e, tab, div) => {
 
         // modifier le li
         div.remove();
-        let nomLi = document.getElementById(e.target.parentNode.id);
-        nomLi.innerHTML = nom;
-        // Debut creation du bouton de modification
-        let buttonModification = document.createElement('button');
-        buttonModification.innerHTML = "&#x270E;";
-        buttonModification.className = "button__Modification";
-        nomLi.append(buttonModification);
-        buttonModification.addEventListener('click', modificationLiPopup);
-        // Fin creation du bouton de modification
-        //rajouter en fonction du css et de ce qu'on veut mettre en visible
+        for (let object of tab){
+            if (object.id === e.target.parentNode.id) {
+                let li = document.getElementById(e.target.parentNode.id);
+                li.remove();
+                let liContainer;
+                if (object.achevement == "todo"){
+                    liContainer = document.getElementById('list__container__todo');
+                }
+                else if (object.achevement == "doing"){
+                    liContainer = document.getElementById('list__container__doing');
+                }
+                else{
+                    liContainer = document.getElementById('list__container__done');
+                }
+                let nomLi = document.createElement('li');
+                nomLi.id = object.id;
+                liContainer.appendChild(nomLi);
+                //ajout date et heure
+                let idDateTime = new Date(object.idDate);
+                let timeLeft = time(idDateTime);
+                //fin du date et heure
+                nomLi.innerHTML = object.nom + ' - ' + timeLeft + ' <button type="button" class="delete-icon">🗑️</button>';
+                // Debut creation du bouton de modification
+
+                let buttonModification = document.createElement('button');
+                buttonModification.innerHTML = "&#x270E;";
+                buttonModification.className = "button__Modification";
+                nomLi.append(buttonModification);
+                buttonModification.addEventListener('click', modificationLiPopup);
+                // Fin creation du bouton de modification
+
+                // écouteur évent suppression
+                let deleteIcon = nomLi.querySelector('.delete-icon');
+                deleteIcon.addEventListener('click', deleteTask);
+                //rajouter en fonction du css et de ce qu'on veut mettre en visible
+        }}
     });
 }
