@@ -3,8 +3,17 @@ import { time } from './time.js';
 import { deleteTask } from "./delete.js";
 
 export let addTask = (object) => {
-
-    let liContainer = document.getElementById('list__container');
+    let liContainer;
+    if (object.achevement == "todo"){
+        liContainer = document.getElementById('list__container__todo');
+    }
+    else if (object.achevement == "doing"){
+        liContainer = document.getElementById('list__container__doing');
+    }
+    else if (object.achevement == "done"){
+        liContainer = document.getElementById('list__container__done');
+    }
+    
     let li = document.createElement('li');
     li.id = object.id;
     //ajout date et heure
