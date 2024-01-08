@@ -14,33 +14,17 @@ export let liCreator = () => {
         //fin du date et heure
         li.innerHTML = elem.nom + ' - ' + timeLeft + ' <button type="button" class="delete-icon">🗑️</button>';
         liContainer.append(li);
+        // Debut creation du bouton de modification
+
+        let buttonModification = document.createElement('button');
+        buttonModification.innerHTML = "&#x270E;";
+        buttonModification.className="button__Modification";
+        li.append(buttonModification);
+
+        // Fin creation du bouton de modification
 
         // Écouteur d'événement pour la suppression
         let deleteIcon = li.querySelector('.delete-icon');
         deleteIcon.addEventListener('click', deleteTask);
     }
 }
-
-    let tab = [];
-    let tableau = localStorage.getItem('Tableau');
-        if (tableau){
-            tab = JSON.parse(tableau);
-            for (let elem of tab){
-                let li = document.createElement('li');
-                li.id = elem.id;
-                li.innerHTML = elem.nom;
-
-                // Debut creation du bouton de modification
-
-                let buttonModification = document.createElement('button');
-                buttonModification.innerHTML = "&#x270E;";
-                buttonModification.className="button__Modification";
-                li.append(buttonModification);
-
-                // Fin creation du bouton de modification
-
-                liContainer.append(li);
-            }
-        }
-    }
->>>>>>> jeremy
