@@ -1,3 +1,4 @@
+import { addTask } from "./addtask.js";
 export let creationObject = () =>{
 
 // Chercher le tableau dans le localStorage
@@ -47,5 +48,5 @@ export let creationObject = () =>{
     tab.push(object);
     let tabjson = JSON.stringify(tab);
     localStorage.setItem('Tableau' , tabjson);
-
+    addTask(object);
 }
