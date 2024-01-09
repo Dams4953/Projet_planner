@@ -12,8 +12,8 @@ import { filterHours } from "./filtrehours.js";
         elem.addEventListener('click', modificationLiPopup);
     }
     // fin du boutton de modification
-
     //button de filtre des heures
+
     let buttonFiltre = document.getElementById('filtreHour');
     buttonFiltre.addEventListener('click' , () => filterHours("todo"));
     buttonFiltre.addEventListener('click' , () => filterHours("doing"));

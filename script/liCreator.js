@@ -2,54 +2,67 @@ import { time } from './time.js';
 import { functionDeleteTask } from "./delete.js";
 
 export let liCreator = () => {
-    document.addEventListener('DOMContentLoaded', function() {
     let tab = JSON.parse(localStorage.getItem('Tableau') || '[]');
     let liContainer;
     for (let elem of tab) {
-        if (elem.achevement == "todo"){
+        if (elem.achevement == "todo") {
             liContainer = document.getElementById('list__container__todo');
         }
-        else if (elem.achevement == "doing"){
+        else if (elem.achevement == "doing") {
             liContainer = document.getElementById('list__container__doing');
         }
-        else if (elem.achevement == "done"){
+        else if (elem.achevement == "done") {
             liContainer = document.getElementById('list__container__done');
         }
         let li = document.createElement('li');
         li.id = elem.id;
 
-        
+        let divButton = document.createElement('div');
+        divButton.className = "div_button";
+        let buttonSupp = document.createElement('button');
+        buttonSupp.className = "delete-icon";
+        buttonSupp.innerHTML = "🚯"
+        divButton.append(buttonSupp);
+
+
+        // Debut creation du bouton de modification
+        let buttonModification = document.createElement('button');
+        buttonModification.innerHTML = "&#x270E;";
+        buttonModification.className = "button__Modification";
+        divButton.append(buttonModification);
+        // Fin creation du bouton de modification
+        li.append(divButton);
 
         //ajout date et heure
         let idDateTime = new Date(elem.idDate);
         let timeLeft = time(idDateTime);
         //fin du date et heure
 
-        li.innerHTML = elem.nom + ' - ' + timeLeft + ' <button type="button" class="delete-icon">🗑️</button>';
+
+
+        let titreDiv = document.createElement('div');
+        titreDiv.className = "div-titre";
+        titreDiv.innerHTML = elem.nom;
+        li.append(titreDiv);
+
+        let timeDiv = document.createElement('div');
+        timeDiv.className = "div-time";
         liContainer.append(li);
+        li.append(timeDiv);
 
-        // Debut creation du bouton de modification
-        let buttonModification = document.createElement('button');
-        buttonModification.innerHTML = "&#x270E;";
-        buttonModification.className="button__Modification";
-        li.append(buttonModification);
-        // Fin creation du bouton de modification
+        timeDiv.innerHTML = timeLeft;
 
-<<<<<<< HEAD
-        // Début ecouteur d'événement pour la suppression
-        let deleteIcon = li.querySelector('.delete-icon');
-        deleteIcon.addEventListener('click', deleteTask);
-         //Fin écouteur d'événement pour la suppression
 
-        }   
-    }
-)};
-=======
-         
+        //Ajout description
+        let div = document.createElement('div');
+        div.className = "desciptionDiv";
+        div.innerHTML = elem.description;
+        li.append(div);
+
+    
     }
     const deleteIcons = document.querySelectorAll('.delete-icon');
     deleteIcons.forEach(icon => {
         icon.addEventListener('click', functionDeleteTask);
     });
 }
->>>>>>> development

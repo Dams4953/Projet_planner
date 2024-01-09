@@ -7,7 +7,7 @@ export let modificationLiPopup = (e) => {
     let tableau = localStorage.getItem('Tableau');
     let tab = JSON.parse(tableau);
     for (let elem of tab) {
-        if (elem.id === e.target.parentNode.id) {
+        if (elem.id === e.target.parentNode.parentNode.id) {
             let endroitModification = e.target.parentNode;
             let div = document.createElement('div');
             div.className = "div__modification";
@@ -72,18 +72,18 @@ let modificationTabLi = (e, tab, div) => {
 
         let description = document.getElementById('description__Modifier').value;
 
-         // début validation description 5 à 1024
-     if (description.length < 5 || description.length > 1024) {
-        alert("La description doit contenir entre 5 et 1024 caractères.");
-        return;
-    }
+        // début validation description 5 à 1024
+        if (description.length < 5 || description.length > 1024) {
+            alert("La description doit contenir entre 5 et 1024 caractères.");
+            return;
+        }
         // fin validation description 5 à 1024
 
         let achevement = document.getElementById('achevement__Modifier').value;
 
         // modifier le tableau dans le localStorage
         for (let elem of tab) {
-            if (elem.id === e.target.parentNode.id) {
+            if (elem.id === e.target.parentNode.parentNode.id) {
                 elem.nom = nom;
                 elem.description = description;
                 elem.achevement = achevement;
@@ -94,41 +94,70 @@ let modificationTabLi = (e, tab, div) => {
 
         // modifier le li
         div.remove();
-        for (let object of tab){
-            if (object.id === e.target.parentNode.id) {
-                let li = document.getElementById(e.target.parentNode.id);
+        for (let object of tab) {
+            if (object.id === e.target.parentNode.parentNode.id) {
+                let li = document.getElementById(e.target.parentNode.parentNode.id);
                 li.remove();
                 let liContainer;
-                if (object.achevement == "todo"){
+                if (object.achevement == "todo") {
                     liContainer = document.getElementById('list__container__todo');
                 }
-                else if (object.achevement == "doing"){
+                else if (object.achevement == "doing") {
                     liContainer = document.getElementById('list__container__doing');
                 }
-                else{
+                else {
                     liContainer = document.getElementById('list__container__done');
                 }
                 let nomLi = document.createElement('li');
                 nomLi.id = object.id;
                 liContainer.appendChild(nomLi);
+
+                let divButton = document.createElement('div');
+                divButton.className = "div_button";
+                let buttonSupp = document.createElement('button');
+                buttonSupp.className = "delete-icon";
+                buttonSupp.innerHTML = "🚯"
+                divButton.append(buttonSupp);
+
+
+                // Debut creation du bouton de modification
+                let buttonModification = document.createElement('button');
+                buttonModification.innerHTML = "&#x270E;";
+                buttonModification.className = "button__Modification";
+                divButton.append(buttonModification);
+                // Fin creation du bouton de modification
+                nomLi.append(divButton);
                 //ajout date et heure
                 let idDateTime = new Date(object.idDate);
                 let timeLeft = time(idDateTime);
                 //fin du date et heure
-                nomLi.innerHTML = object.nom + ' - ' + timeLeft + ' <button type="button" class="delete-icon">🗑️</button>';
-                // Debut creation du bouton de modification
 
-                let buttonModification = document.createElement('button');
-                buttonModification.innerHTML = "&#x270E;";
-                buttonModification.className = "button__Modification";
-                nomLi.append(buttonModification);
-                buttonModification.addEventListener('click', modificationLiPopup);
-                // Fin creation du bouton de modification
+                liContainer.append(nomLi);
+
+                let titreDiv = document.createElement('div');
+                titreDiv.className = "div-titre";
+                titreDiv.innerHTML = object.nom;
+                nomLi.append(titreDiv);
+
+                let timeDiv = document.createElement('div');
+                timeDiv.className = "div-time";
+                liContainer.append(nomLi);
+                nomLi.append(timeDiv);
+
+                timeDiv.innerHTML = timeLeft;
+
+
+                //Ajout description
+                let div = document.createElement('div');
+                div.className = "desciptionDiv";
+                div.innerHTML = object.description;
+                nomLi.append(div);
 
                 // écouteur évent suppression
                 let deleteIcon = nomLi.querySelector('.delete-icon');
                 deleteIcon.addEventListener('click', functionDeleteTask);
                 //rajouter en fonction du css et de ce qu'on veut mettre en visible
-        }}
+            }
+        }
     });
 }
