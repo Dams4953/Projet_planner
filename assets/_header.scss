@@ -1,0 +1,67 @@
+$primary : #58b4ca;
+
+header{
+    width : 60%;
+    margin : auto;
+    background-color : $primary;
+    border-radius : 15px;
+    box-shadow : 0px 5px 7px 0px #00000059;
+    margin-top : 30px;
+    padding : 15px;
+    display : flex;
+    justify-content: space-around;
+    .headerleft{
+       width : 45%;
+       text-align : right;
+       .headerlabel{
+        color : white;
+       }
+       #nom{
+        width : 70%;
+        height : 25px;
+        border-radius : 15px;
+        padding : 10px;
+        border:none;
+        margin-bottom : 15px;
+       }
+       #description{
+        width : 70%;
+        height : 25px;
+        border-radius : 15px;
+        padding : 10px;
+        border:none;
+       }
+    }
+    .header__right{
+        width : 45%;
+        text-align : center;
+        #achevement{
+            width: 100%;
+            border-radius: 15px;
+            padding: 7px;
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        #idDate{
+            width: 44%;
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
+            text-align: center;
+        }
+        #idTime{
+            margin-left: 15px;
+            border: none;
+            border-radius: 15px;
+            width: 44%;
+            text-align: center;
+            padding: 15px 0px;
+        }
+     }
+ 
+
+
+
+
+}

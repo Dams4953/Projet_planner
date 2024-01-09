@@ -10,51 +10,58 @@
 </head>
 
 <body>
-
-    <section class="top">
-        <input type="text" id="nom">
-        <input type="text" id="description">
+    <header>
+        <div class="headerleft">
+        <label class="headerlabel" for="nom">Titre : </label><input type="text" id="nom" placeholder="ex : Faire la vaisselle">
+        <label class="headerlabel" for="description">Description : </label><input type="text" id="description" placeholder="ex : Laver les assiettes qui sortent du lave-vaisselle">
+        </div>
+        <div class="headerright">
         <select id="achevement">
-            <option value="todo">TO DO</option>
+            <option value="todo">To Do</option>
             <option value="doing">Doing</option>
             <option value="done">Done</option>
         </select>
         <input type="date" id="idDate">
         <input type="time" id="idTime">
-        <button id="confirmer">Ajouter</button>
-    </section>
-
-<main>
-    <section class="list">
-        <div class="toDo">
-        <h2>
-        To Do :
-        </h2>
-        <div>
-        <ul id="list__container__todo">
-
-        </ul>
+        <button class="button" type="button" id="confirmer">
+            <span class="buttontext">Add Item</span>
+            <span class="buttonicon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+          </button>
         </div>
-        </div>
-        <div class="doing">
-        <h2>
-        Doing :
-        </h2>
-        <ul id="list__container__doing">
+    </header>
 
-        </ul>
-        </div>
-        <div class="done">
-        <h2>
-        Done :
-        </h2>
-        <ul id="list__container__done">
+    <main>
+        <section class="list">
+            <div class="toDo">
+                <h2>
+                    To Do
+                </h2>
+                <ul class="toDo_list" id="list__container__todo">
 
-        </ul>
-        </div>
-    </section>
-</main>
-    <button id="filtreHour" >Filtrer par temps restant</button>
+                </ul>
+            </div>
+
+            <div class="doing">
+                <h2>
+                    Doing
+                </h2>
+
+                <ul class="doing_list" id="list__container__doing">
+
+                </ul>
+            </div>
+
+            <div class="done">
+                <h2>
+                    Done
+                </h2>
+                <ul class="done_list" id="list__container__done">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <button id="filtreHour">Filtrer par temps restant</button>
 </body>
 
 </html>
