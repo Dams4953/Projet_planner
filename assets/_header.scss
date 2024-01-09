@@ -10,10 +10,10 @@ header{
     padding : 15px;
     display : flex;
     justify-content: space-around;
-    .headerleft{
+    .header__left{
        width : 45%;
        text-align : right;
-       .headerlabel{
+       .header__label{
         color : white;
        }
        #nom{

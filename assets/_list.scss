@@ -8,66 +8,230 @@ $backgroundColonnesColor: #58b4ca;
     height: 800px;
     
     .toDo {
-        padding: 40px;
         display: flex;
         flex-direction: column;
-        width: 33%;
-        height: 600px;
+        width: 25%;
         align-items: center;
-        justify-content: center;
-        background-color: $backgroundColonnesColor;
+        justify-content: flex-start;
+        background-color: #58b4ca;
         margin: 30px;
-        box-shadow : 0px 5px 7px 0px #00000059;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
+        overflow: scroll;
+        height: 600px;
 
         h2{
             display: flex;
             flex-direction: column;
-            margin-top: -500px;
-            font-size: 20px;
+            margin-top: 10px;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.637);
         }
+
+        .toDo_list {
+            width: 100%;
+
+            li {
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+                border-radius: 15px;
+                margin: 20px;
+                padding: 12px;
+                word-wrap: break-word;
+                word-break: break-all;
+
+                .div-titre {
+                    font-size: 25px;
+                }
+
+                .div-time{
+                    color: #549eb1dc;
+                }
+                
+                
+
+                .desciptionDiv{
+                    margin-top: 25px;
+                }
+
+                .div_button{  
+                    display: flex;
+                    width: 100%;
+                    margin: -15px 0px 0px -15px;
+                    
+
+                    .delete-icon{
+                        margin: 8px -5px 6px 7px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        
+                        
+                    }
+                    .button__Modification {
+                        margin: 8px 0px 6px 0px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                }
+            }
+        }
+
+
         
     }
 
     .doing{
-        padding: 40px;
         display: flex;
         flex-direction: column;
-        width: 33%;
-        height: 600px;
+        width: 25%;
         align-items: center;
-        justify-content: center;
-        background-color: $backgroundColonnesColor;
+        justify-content: flex-start;
+        background-color: #58b4ca;
         margin: 30px;
-        box-shadow : 0px 5px 7px 0px #00000059;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
+        overflow: scroll;
+        height: 600px;
 
         h2{
             display: flex;
             flex-direction: column;
-            margin-top: -500px;
-            font-size: 20px;
+            margin-top: 10px;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.637);
+        }
+
+        .doing_list {
+            width: 100%;
+
+            li {
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+                border-radius: 15px;
+                margin: 20px;
+                padding: 12px;
+                word-wrap: break-word;
+                word-break: break-all;
+
+                .div-titre {
+                    font-size: 25px;
+                }
+
+                .div-time{
+                    color: #549eb1dc;
+                }
+                
+                
+
+                .desciptionDiv{
+                    margin-top: 25px;
+                }
+
+                .div_button{  
+                    display: flex;
+                    width: 100%;
+                    margin: -15px 0px 0px -15px;
+                    
+
+                    .delete-icon{
+                        margin: 8px -5px 6px 7px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        
+                        
+                    }
+                    .button__Modification {
+                        margin: 8px 0px 6px 0px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                }
+            }
         }
     }
 
     .done {
-        padding: 40px;
         display: flex;
         flex-direction: column;
-        width: 33%;
-        height: 600px;
+        width: 25%;
         align-items: center;
-        justify-content: center;
-        background-color: $backgroundColonnesColor;
+        justify-content: flex-start;
+        background-color: #58b4ca;
         margin: 30px;
-        box-shadow : 0px 5px 7px 0px #00000059;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
+        overflow: scroll;
+        height: 600px;
 
         h2{
             display: flex;
             flex-direction: column;
-            margin-top: -500px;
-            font-size: 20px;
+            margin-top: 10px;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.637);
+        }
+
+        .done_list {
+            width: 100%;
+
+            li {
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+                border-radius: 15px;
+                margin: 20px;
+                padding: 12px;
+                word-wrap: break-word;
+                word-break: break-all;
+
+                .div-titre {
+                    font-size: 25px;
+                }
+
+                .div-time{
+                    color: #549eb1dc;
+                }
+                
+                
+
+                .desciptionDiv{
+                    margin-top: 25px;
+                }
+
+                .div_button{  
+                    display: flex;
+                    width: 100%;
+                    margin: -15px 0px 0px -15px;
+                    
+
+                    .delete-icon{
+                        margin: 8px -5px 6px 7px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        
+                        
+                    }
+                    .button__Modification {
+                        margin: 8px 0px 6px 0px;
+                        width: 30px;
+                        font-size: 15px;
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                }
+            }
         }
     }
     }

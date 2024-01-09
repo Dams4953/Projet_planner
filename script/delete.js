@@ -1,6 +1,5 @@
-
 export function functionDeleteTask(event) {
-    const taskElement = event.target.parentElement;
+    const taskElement = event.target.parentElement.parentElement;
     const taskId = taskElement.id;
 
     taskElement.remove();
@@ -9,9 +8,3 @@ export function functionDeleteTask(event) {
     tasks = tasks.filter(task => task.id !== taskId);
     localStorage.setItem('Tableau', JSON.stringify(tasks));
 }
-
-
-      
-
-
-

@@ -32,7 +32,7 @@ export let creationObject = () => {
     let achevementElement = document.getElementById('achevement').value;
     object.achevement = achevementElement;
 
-    // une date d'échéance , doit être une date valide)
+    // une date d'échéance (obligatoire, par défaut "2 semaines à compter de la création", doit être une date valide)
     let idDateElement = document.getElementById('idDate');
     let idTimeElement = document.getElementById('idTime');
     let idDateTime;
