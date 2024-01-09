@@ -1,8 +1,5 @@
-export let deleteTask = () => {
 
-
-    function functionDeleteTask(event) {
-        event.preventDefault();
+    export function functionDeleteTask(event) {
         const taskElement = event.target.parentElement;
         const taskId = taskElement.id;
 
@@ -14,15 +11,7 @@ export let deleteTask = () => {
     }
 
 
-    function initialDeleteFunction() {
-        const deleteIcons = document.querySelectorAll('.delete-icon');
+      
 
-        deleteIcons.forEach(icon => {
-            icon.addEventListener('click', functionDeleteTask);
-        });
-    }
 
-    initialDeleteFunction();
-
-}
 

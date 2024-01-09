@@ -1,5 +1,5 @@
 import { time } from './time.js';
-import { deleteTask } from "./delete.js";
+import { functionDeleteTask } from "./delete.js";
 
 export let liCreator = () => {
     let tab = JSON.parse(localStorage.getItem('Tableau') || '[]');
@@ -34,11 +34,10 @@ export let liCreator = () => {
         li.append(buttonModification);
         // Fin creation du bouton de modification
 
-        // Début ecouteur d'événement pour la suppression
-        let deleteIcon = li.querySelector('.delete-icon');
-        deleteIcon.addEventListener('click', deleteTask);
-         //Fin écouteur d'événement pour la suppression
-
          
     }
+    const deleteIcons = document.querySelectorAll('.delete-icon');
+    deleteIcons.forEach(icon => {
+        icon.addEventListener('click', functionDeleteTask);
+    });
 }

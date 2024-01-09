@@ -1,6 +1,6 @@
 import { modificationLiPopup } from "./update.js";
 import { time } from './time.js';
-import { deleteTask } from "./delete.js";
+import { functionDeleteTask } from "./delete.js";
 
 export let addTask = (object) => {
 
@@ -51,5 +51,5 @@ export let addTask = (object) => {
 
     // Écouteur d'événement pour la suppression
     let deleteIcon = li.querySelector('.delete-icon');
-    deleteIcon.addEventListener('click', deleteTask);
+    deleteIcon.addEventListener('click', functionDeleteTask);
 }
