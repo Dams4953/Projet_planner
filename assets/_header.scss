@@ -1,15 +1,4 @@
 
-// <input type="text" id="nom">
-// <input type="text" id="description">
-// <select id="achevement">
-//     <option value="todo">TO DO</option>
-//     <option value="doing">Doing</option>
-//     <option value="done">Done</option>
-// </select>
-// <input type="date" id="idDate">
-// <input type="time" id="idTime">
-// <button id="confirmer">Ajouter</button>
-
 
 $primary : #58b4ca;
 
@@ -49,13 +38,28 @@ header{
         width : 45%;
         text-align : center;
         #achevement{
-            width : 90%;
+            width: 100%;
             border-radius: 15px;
-            padding : 15px;
+            padding: 7px;
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        #idDate{
+            width: 44%;
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
             text-align: center;
         }
-
-
+        #idTime{
+            margin-left: 15px;
+            border: none;
+            border-radius: 15px;
+            width: 44%;
+            text-align: center;
+            padding: 15px 0px;
+        }
      }
  
 
