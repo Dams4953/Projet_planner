@@ -1,3 +1,128 @@
+header {
+  width: 60%;
+  margin: auto;
+  background-color: #58b4ca;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+header .header__left {
+  width: 45%;
+  text-align: right;
+}
+header .header__left .header__label {
+  color: white;
+}
+header .header__left #nom {
+  width: 70%;
+  height: 25px;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+header .header__left #description {
+  width: 70%;
+  height: 25px;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+}
+header .header__right {
+  width: 45%;
+  text-align: center;
+}
+header .header__right #achevement {
+  width: 100%;
+  border-radius: 15px;
+  padding: 7px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+header .header__right #idDate {
+  width: 44%;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+}
+header .header__right #idTime {
+  margin-left: 15px;
+  border: none;
+  border-radius: 15px;
+  width: 44%;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #58b4ca;
+  --bg-color: white;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  float: right;
+  margin-top: 15px;
+  border: 2px solid white;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: white;
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -175,4 +300,195 @@ header .header__right #idTime {
 .button:active {
   transform: translate(3px, 3px);
   box-shadow: 0px 0px var(--main-color);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 800px;
+}
+.list .toDo {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #58b4ca;
+  margin: 30px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  overflow: scroll;
+  height: 600px;
+}
+.list .toDo h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.637);
+}
+.list .toDo .toDo_list {
+  width: 100%;
+}
+.list .toDo .toDo_list li {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.list .toDo .toDo_list li .div-titre {
+  font-size: 25px;
+}
+.list .toDo .toDo_list li .div-time {
+  color: rgba(84, 158, 177, 0.862745098);
+}
+.list .toDo .toDo_list li .desciptionDiv {
+  margin-top: 25px;
+}
+.list .toDo .toDo_list li .div_button {
+  display: flex;
+  width: 100%;
+  margin: -15px 0px 0px -15px;
+}
+.list .toDo .toDo_list li .div_button .delete-icon {
+  margin: 8px -5px 6px 7px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.list .toDo .toDo_list li .div_button .button__Modification {
+  margin: 8px 0px 6px 0px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.list .doing {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #58b4ca;
+  margin: 30px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  overflow: scroll;
+  height: 600px;
+}
+.list .doing h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.637);
+}
+.list .doing .doing_list {
+  width: 100%;
+}
+.list .doing .doing_list li {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.list .doing .doing_list li .div-titre {
+  font-size: 25px;
+}
+.list .doing .doing_list li .div-time {
+  color: rgba(84, 158, 177, 0.862745098);
+}
+.list .doing .doing_list li .desciptionDiv {
+  margin-top: 25px;
+}
+.list .doing .doing_list li .div_button {
+  display: flex;
+  width: 100%;
+  margin: -15px 0px 0px -15px;
+}
+.list .doing .doing_list li .div_button .delete-icon {
+  margin: 8px -5px 6px 7px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.list .doing .doing_list li .div_button .button__Modification {
+  margin: 8px 0px 6px 0px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.list .done {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #58b4ca;
+  margin: 30px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  overflow: scroll;
+  height: 600px;
+}
+.list .done h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.637);
+}
+.list .done .done_list {
+  width: 100%;
+}
+.list .done .done_list li {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.list .done .done_list li .div-titre {
+  font-size: 25px;
+}
+.list .done .done_list li .div-time {
+  color: rgba(84, 158, 177, 0.862745098);
+}
+.list .done .done_list li .desciptionDiv {
+  margin-top: 25px;
+}
+.list .done .done_list li .div_button {
+  display: flex;
+  width: 100%;
+  margin: -15px 0px 0px -15px;
+}
+.list .done .done_list li .div_button .delete-icon {
+  margin: 8px -5px 6px 7px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.list .done .done_list li .div_button .button__Modification {
+  margin: 8px 0px 6px 0px;
+  width: 30px;
+  font-size: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }/*# sourceMappingURL=style.css.map */
