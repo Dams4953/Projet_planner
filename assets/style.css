@@ -177,12 +177,30 @@ header .header__right #idTime {
   box-shadow: 0px 0px var(--main-color);
 }
 
+.bouton_filtre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.bouton_filtre .sous_bouton_filtre {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 20px;
+}
+
 .list {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 800px;
+  height: 700px;
 }
 .list .toDo {
   display: flex;

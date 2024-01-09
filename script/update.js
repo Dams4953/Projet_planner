@@ -153,10 +153,14 @@ let modificationTabLi = (e, tab, div) => {
                 div.innerHTML = object.description;
                 nomLi.append(div);
 
+                // écouteur évent modification
+                let modifIcone = nomLi.querySelector('.button__Modification');
+                modifIcone.addEventListener('click', modificationLiPopup);
+
                 // écouteur évent suppression
                 let deleteIcon = nomLi.querySelector('.delete-icon');
                 deleteIcon.addEventListener('click', functionDeleteTask);
-                //rajouter en fonction du css et de ce qu'on veut mettre en visible
+
             }
         }
     });
