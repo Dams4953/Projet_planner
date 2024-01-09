@@ -17,8 +17,25 @@ $backgroundColonnesColor: #58b4ca;
         margin: 30px;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
-        overflow: scroll;
+        overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+    }
+    
+    /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
+    .toDo::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    
+    .toDo::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    
+    /* Masquer les barres de défilement sur Firefox */
+    .toDo {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    
+        // enlever le scroll
 
         h2{
             display: flex;
@@ -85,7 +102,7 @@ $backgroundColonnesColor: #58b4ca;
         
     }
 
-    .doing{
+    .doing {
         display: flex;
         flex-direction: column;
         width: 25%;
@@ -95,8 +112,23 @@ $backgroundColonnesColor: #58b4ca;
         margin: 30px;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
-        overflow: scroll;
+        overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+    }
+    
+    /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
+    .doing::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    
+    .doing::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    
+    /* Masquer les barres de défilement sur Firefox */
+    .doing {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
 
         h2{
             display: flex;
@@ -170,8 +202,23 @@ $backgroundColonnesColor: #58b4ca;
         margin: 30px;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
         border-radius: 15px;
-        overflow: scroll;
+        overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+    }
+    
+    /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
+    .done::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    
+    .done::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    
+    /* Masquer les barres de défilement sur Firefox */
+    .done {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
 
         h2{
             display: flex;

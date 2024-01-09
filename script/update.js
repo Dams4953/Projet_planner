@@ -4,6 +4,7 @@ import { functionDeleteTask } from "./delete.js";
 
 
 export let modificationLiPopup = (e) => {
+    console.log(e);
     let tableau = localStorage.getItem('Tableau');
     let tab = JSON.parse(tableau);
     for (let elem of tab) {
@@ -62,7 +63,6 @@ let modificationTabLi = (e, tab, div) => {
     let btn = document.getElementById('modifier');
     btn.addEventListener('click', () => {
         let nom = document.getElementById('nom__Modifier').value;
-
         // début validation titre 3 à 256 caractères
         if (nom.length < 3 || nom.length > 256) {
             alert("Le titre doit contenir entre 3 et 256 caractères.");
@@ -153,10 +153,16 @@ let modificationTabLi = (e, tab, div) => {
                 div.innerHTML = object.description;
                 nomLi.append(div);
 
+                // écouteur évent modification
+                let modifIcone = nomLi.querySelector('.button__Modification');
+                modifIcone.addEventListener('click', modificationLiPopup);
+
                 // écouteur évent suppression
                 let deleteIcon = nomLi.querySelector('.delete-icon');
                 deleteIcon.addEventListener('click', functionDeleteTask);
                 //rajouter en fonction du css et de ce qu'on veut mettre en visible
+
+
             }
         }
     });
