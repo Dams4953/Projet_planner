@@ -15,5 +15,7 @@ import { filterHours } from "./filtrehours.js";
 
     //button de filtre des heures
     let buttonFiltre = document.getElementById('filtreHour');
-    buttonFiltre.addEventListener('click' , filterHours);
+    buttonFiltre.addEventListener('click' , () => filterHours("todo"));
+    buttonFiltre.addEventListener('click' , () => filterHours("doing"));
+    buttonFiltre.addEventListener('click' , () => filterHours("done"));
     //fin du bouton de filtre des heures

@@ -1,6 +1,6 @@
 // creation du popup
 import { time } from './time.js';
-import { deleteTask } from "./delete.js";
+import { functionDeleteTask } from "./delete.js";
 
 
 export let modificationLiPopup = (e) => {
@@ -127,7 +127,7 @@ let modificationTabLi = (e, tab, div) => {
 
                 // écouteur évent suppression
                 let deleteIcon = nomLi.querySelector('.delete-icon');
-                deleteIcon.addEventListener('click', deleteTask);
+                deleteIcon.addEventListener('click', functionDeleteTask);
                 //rajouter en fonction du css et de ce qu'on veut mettre en visible
         }}
     });
