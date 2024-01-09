@@ -10,18 +10,24 @@
 </head>
 
 <body>
-    <section class="top">
-        <input type="text" id="nom">
-        <input type="text" id="description">
+    <header>
+        <div class="header__left">
+        <label class="header__label" for="nom">Titre : </label><input type="text" id="nom" placeholder="ex : Faire la vaisselle">
+        <label class="header__label" for="description">Description : </label><input type="text" id="description" placeholder="ex : Laver les assiettes qui sortent du lave-vaisselle">
+        </div>
+        <div class="header__right">
         <select id="achevement">
-            <option value="todo">TO DO</option>
+            <option value="todo">To Do</option>
             <option value="doing">Doing</option>
             <option value="done">Done</option>
         </select>
         <input type="date" id="idDate">
         <input type="time" id="idTime">
         <button id="confirmer">Ajouter</button>
-    </section>
+        </div>
+    </header>
+
+
     <section class="list">
         To Do :
         <ul id="list__container__todo">
