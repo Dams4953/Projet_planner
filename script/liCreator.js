@@ -2,6 +2,7 @@ import { time } from './time.js';
 import { deleteTask } from "./delete.js";
 
 export let liCreator = () => {
+    document.addEventListener('DOMContentLoaded', function() {
     let tab = JSON.parse(localStorage.getItem('Tableau') || '[]');
     let liContainer;
     for (let elem of tab) {
@@ -39,6 +40,6 @@ export let liCreator = () => {
         deleteIcon.addEventListener('click', deleteTask);
          //Fin écouteur d'événement pour la suppression
 
-         
+        }   
     }
-}
+)};

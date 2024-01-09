@@ -1,28 +1,27 @@
 export let deleteTask = () => {
+document.addEventListener('DOMContentLoaded', function() {
+    
+        
+        function functionDeleteTask(event) {
+            event.preventDefault();
+            const taskElement = event.target.parentElement;
+            const taskId = taskElement.id;
 
+            taskElement.remove();
 
-    function functionDeleteTask(event) {
-        event.preventDefault();
-        const taskElement = event.target.parentElement;
-        const taskId = taskElement.id;
+            let tasks = JSON.parse(localStorage.getItem('Tableau'));
+            tasks = tasks.filter(task => task.id !== taskId);
+            localStorage.setItem('Tableau', JSON.stringify(tasks));
+        }
 
-        taskElement.remove();
+        function initialDeleteFunction() {
+            const deleteIcons = document.querySelectorAll('.delete-icon');
 
-        let tasks = JSON.parse(localStorage.getItem('Tableau'));
-        tasks = tasks.filter(task => task.id !== taskId);
-        localStorage.setItem('Tableau', JSON.stringify(tasks));
+            deleteIcons.forEach(icon => {
+                icon.addEventListener('click', functionDeleteTask);
+            });
+        }
+
+        initialDeleteFunction();
     }
-
-
-    function initialDeleteFunction() {
-        const deleteIcons = document.querySelectorAll('.delete-icon');
-
-        deleteIcons.forEach(icon => {
-            icon.addEventListener('click', functionDeleteTask);
-        });
-    }
-
-    initialDeleteFunction();
-
-}
-
+    )};

@@ -4,7 +4,7 @@ import { deleteTask } from "./delete.js";
 
 export let addTask = (object) => {
 
-
+document.addEventListener('DOMContentLoaded', function() {
 
     // Validation titre 3 à 256 caractères
     if (object.nom.length < 3 || object.nom.length > 256) {
@@ -53,3 +53,4 @@ export let addTask = (object) => {
     let deleteIcon = li.querySelector('.delete-icon');
     deleteIcon.addEventListener('click', deleteTask);
 }
+)};
