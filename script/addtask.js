@@ -2,6 +2,7 @@ import { modificationLiPopup } from "./update.js";
 import { time } from './time.js';
 import { functionDeleteTask } from "./delete.js";
 
+
 export let addTask = (object) => {
 
 
@@ -30,6 +31,8 @@ export let addTask = (object) => {
         }
 
         let li = document.createElement('li');
+        li.className = 'task'; // Adding 'task' class
+        li.setAttribute('draggable', 'true'); // Making the task draggable
         li.id = object.id;
 
         let divButton = document.createElement('div');

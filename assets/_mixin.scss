@@ -22,8 +22,8 @@
      }
  }
 
- @mixin media-maxwidth($screensize1124){
-    @media (max-width:$screensize1124) {
+ @mixin media-maxwidth($screensize1511){
+    @media (max-width:$screensize1511) {
        @content;
      }
  }
