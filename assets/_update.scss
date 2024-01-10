@@ -1,0 +1,68 @@
+.div__modification{
+    background-color: #58B4CA85;
+    margin : 15px;
+    border-radius : 15px;
+    padding : 10px;
+    box-shadow: 0px 5px 7px 0px #00000059;
+    #nom__Modifier{
+        padding : 5px;
+        border-radius : 15px;
+        width : 90%;
+        border : none;
+        margin-bottom : 10px;
+        box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+    }
+    #description__Modifier{
+        padding : 5px;
+        border-radius : 15px;
+        width : 90%;
+        border : none;
+        margin-bottom : 10px;
+        box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+    }
+    #achevement__Modifier{
+        padding : 5px;
+        border-radius : 15px;
+        width : 40%;
+        border : none;
+        margin-bottom : 10px;
+        box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+    }
+    #modify{
+        margin-left: 10px;
+        width: 45%;
+        background-color: #fff;
+        border: 1px solid #58B4CA;
+        padding: 5px;
+        transition: 0.5s;
+        font-size: 17px;
+        border-radius: 15px;
+        box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+          }
+          
+          p {
+            margin: 0;
+            padding: 0;
+            transition: .5s;
+            color: #58B4CA;
+          }
+          
+          &:hover p {
+            left: 0.6em;
+            color: #fff
+          }
+          
+          #modify:hover {
+            background-color: #58B4CA;
+          }
+          
+    }
+
+
+
+//      <select
+//         id=" achevement__Modifier">
+//         <option value=" todo">TO DO</option>
+//         <option value=" doing">Doing</option>
+//         <option value=" done">Done</option>
+//     </select>

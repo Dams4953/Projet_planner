@@ -49,7 +49,10 @@ export let modificationLiPopup = (e) => {
             }
             let btnmodification = document.createElement('button');
             btnmodification.id = "modify";
-            btnmodification.innerHTML = "modify";
+            btnmodification.innerHTML = `
+            <p>Modify</p>`;
+        
+            
             div.append(btnmodification);
             endroitModification.append(div);
             modificationTabLi(e, tab, div);
