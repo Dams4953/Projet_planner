@@ -5,6 +5,17 @@ import { filterHours } from "./filtrehours.js";
 
     let buttonConfirmer = document.getElementById('confirmer');
     buttonConfirmer.addEventListener('click', creationObject);
+    
+   
+// Ecoute pour le enter
+let enter = (e) =>{
+    if(e.key === 'Enter'){
+        creationObject();
+    }
+    }
+    document.addEventListener('keyup', enter);
+
+    
     liCreator();
 // button de modification
     let btnModification = document.querySelectorAll('.button__Modification');

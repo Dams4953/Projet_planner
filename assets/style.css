@@ -286,7 +286,7 @@ header .header__right #idTime {
   margin: 30px;
   box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
   border-radius: 15px;
-  overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
+  overflow: scroll; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
 }
 @media (max-width: 1100px) {
@@ -362,7 +362,7 @@ header .header__right #idTime {
   margin: 30px;
   box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
   border-radius: 15px;
-  overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
+  overflow: scroll; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
 }
 @media (max-width: 1100px) {
@@ -438,7 +438,7 @@ header .header__right #idTime {
   margin: 30px;
   box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
   border-radius: 15px;
-  overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
+  overflow: scroll; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
 }
 @media (max-width: 1100px) {
