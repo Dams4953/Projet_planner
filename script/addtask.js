@@ -72,7 +72,8 @@ export let addTask = (object) => {
 
 
         // Écouteur d'événement pour la suppression
-        let deleteIcon = li.querySelector('.delete-icon');
-        deleteIcon.addEventListener('click', functionDeleteTask);
+        buttonSupp.addEventListener('click', functionDeleteTask);
+
+        buttonModification.addEventListener('click', modificationLiPopup);
 
     };
