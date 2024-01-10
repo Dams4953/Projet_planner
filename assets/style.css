@@ -503,4 +503,60 @@ header .header__right #idTime {
   font-size: 15px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.div__modification {
+  background-color: rgba(88, 180, 202, 0.5215686275);
+  margin: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.div__modification #nom__Modifier {
+  padding: 5px;
+  border-radius: 15px;
+  width: 90%;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.div__modification #description__Modifier {
+  padding: 5px;
+  border-radius: 15px;
+  width: 90%;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.div__modification #achevement__Modifier {
+  padding: 5px;
+  border-radius: 15px;
+  width: 40%;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.div__modification #modify {
+  margin-left: 10px;
+  width: 45%;
+  background-color: #fff;
+  border: 1px solid #58B4CA;
+  padding: 5px;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 15px;
+  box-shadow: inset 1px 3px 7px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.div__modification p {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  color: #58B4CA;
+}
+.div__modification:hover p {
+  left: 0.6em;
+  color: #fff;
+}
+.div__modification #modify:hover {
+  background-color: #58B4CA;
 }/*# sourceMappingURL=style.css.map */
