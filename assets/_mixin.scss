@@ -1,0 +1,29 @@
+@mixin media-maxwidth($screensize1100){
+    @media (max-width:$screensize1100) {
+       @content;
+     }
+ }
+
+ @mixin media-minwidth($screensize1738){
+    @media (min-width:$screensize1738) {
+       @content;
+     }
+ }
+
+ @mixin media-minwidth($screensize1798){
+    @media (min-width:$screensize1798) {
+       @content;
+     }
+ }
+
+ @mixin media-minwidth($screensize1863){
+    @media (min-width:$screensize1863) {
+       @content;
+     }
+ }
+
+ @mixin media-maxwidth($screensize1124){
+    @media (max-width:$screensize1124) {
+       @content;
+     }
+ }

@@ -1,4 +1,5 @@
 $backgroundColonnesColor: #58b4ca;
+$screensize1100: "1100px";
 
 .bouton_filtre{
     display: flex;
@@ -25,6 +26,14 @@ $backgroundColonnesColor: #58b4ca;
     justify-content: center;
     width: 100%;
     height: 700px;
+
+    @include media-maxwidth($screensize1100) {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+     
+    }
     
     .toDo {
         display: flex;
@@ -38,6 +47,10 @@ $backgroundColonnesColor: #58b4ca;
         border-radius: 15px;
         overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+
+        @include media-maxwidth($screensize1100) {
+            width: 60%;
+        }
     }
     
     /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
@@ -133,6 +146,10 @@ $backgroundColonnesColor: #58b4ca;
         border-radius: 15px;
         overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+
+        @include media-maxwidth($screensize1100) {
+            width: 60%;
+        }
     }
     
     /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
@@ -148,6 +165,7 @@ $backgroundColonnesColor: #58b4ca;
     .doing {
         scrollbar-width: thin;
         scrollbar-color: transparent transparent;
+        
 
         h2{
             display: flex;
@@ -223,6 +241,10 @@ $backgroundColonnesColor: #58b4ca;
         border-radius: 15px;
         overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
         height: 600px;
+
+        @include media-maxwidth($screensize1100) {
+            width: 60%;
+        }
     }
     
     /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */

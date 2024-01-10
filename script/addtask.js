@@ -7,13 +7,13 @@ export let addTask = (object) => {
 
         // Validation titre 3 à 256 caractères
         if (object.nom.length < 3 || object.nom.length > 256) {
-            alert("Le titre doit contenir entre 3 et 256 caractères.");
+            alert("The title must contain between 3 and 256 characters.");
             return;
         }
 
         // Validation description 5 à 1024
         if (object.description.length < 5 || object.description.length > 1024) {
-            alert("La description doit contenir entre 5 et 1024 caractères.");
+            alert("The description must contain between 5 and 1024 characters.");
             return;
         }
 

@@ -1,3 +1,5 @@
+$screensize1124: "1124px";
+
 .button {
   --main-focus: #2d8cf0;
   --font-color: #323232;
@@ -16,6 +18,10 @@
   float : right;
   margin-top : 15px;
   border: 2px solid white;
+
+  @include media-maxwidth($screensize1124) {
+    margin-top : 0px;
+}
 }
 
 .button, .button__icon, .button__text {

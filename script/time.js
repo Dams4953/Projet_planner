@@ -3,7 +3,7 @@ export function time(idDateTime) {
     const diff = idDateTime - now;
 
     if (diff <= 0) {
-        return "Temps écoulé"; 
+        return "Time elapsed"; 
     }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));

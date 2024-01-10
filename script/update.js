@@ -48,8 +48,8 @@ export let modificationLiPopup = (e) => {
                 selectedOption.selected = true;
             }
             let btnmodification = document.createElement('button');
-            btnmodification.id = "modifier";
-            btnmodification.innerHTML = "Modifier";
+            btnmodification.id = "modify";
+            btnmodification.innerHTML = "modify";
             div.append(btnmodification);
             endroitModification.append(div);
             modificationTabLi(e, tab, div);
@@ -60,12 +60,12 @@ export let modificationLiPopup = (e) => {
 
 // modification des li et du tableau
 let modificationTabLi = (e, tab, div) => {
-    let btn = document.getElementById('modifier');
+    let btn = document.getElementById('modify');
     btn.addEventListener('click', () => {
         let nom = document.getElementById('nom__Modifier').value;
         // début validation titre 3 à 256 caractères
         if (nom.length < 3 || nom.length > 256) {
-            alert("Le titre doit contenir entre 3 et 256 caractères.");
+            alert("The title must contain between 3 and 256 characters.");
             return;
         }
         // fin validation titre 3 à 256 caractères
@@ -74,7 +74,7 @@ let modificationTabLi = (e, tab, div) => {
 
         // début validation description 5 à 1024
         if (description.length < 5 || description.length > 1024) {
-            alert("La description doit contenir entre 5 et 1024 caractères.");
+            alert("The description must contain between 5 and 1024 characters.");
             return;
         }
         // fin validation description 5 à 1024

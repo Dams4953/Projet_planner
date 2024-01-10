@@ -68,8 +68,20 @@ header .header__left {
   width: 45%;
   text-align: right;
 }
+@media (max-width: 1511px) {
+  header .header__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 header .header__left .header__label {
   color: white;
+}
+@media (max-width: 1511px) {
+  header .header__left .header__label {
+    margin-bottom: 10px;
+  }
 }
 header .header__left #nom {
   width: 70%;
@@ -79,12 +91,42 @@ header .header__left #nom {
   border: none;
   margin-bottom: 15px;
 }
+@media (min-width: 1738px) {
+  header .header__left #nom {
+    width: 71%;
+  }
+}
+@media (min-width: 1798px) {
+  header .header__left #nom {
+    width: 72%;
+  }
+}
+@media (min-width: 1863px) {
+  header .header__left #nom {
+    width: 73%;
+  }
+}
 header .header__left #description {
   width: 70%;
   height: 25px;
   border-radius: 15px;
   padding: 10px;
   border: none;
+}
+@media (min-width: 1738px) {
+  header .header__left #description {
+    width: 71%;
+  }
+}
+@media (min-width: 1798px) {
+  header .header__left #description {
+    width: 72%;
+  }
+}
+@media (min-width: 1863px) {
+  header .header__left #description {
+    width: 73%;
+  }
 }
 header .header__right {
   width: 45%;
@@ -105,6 +147,12 @@ header .header__right #idDate {
   border: none;
   text-align: center;
 }
+@media (max-width: 1511px) {
+  header .header__right #idDate {
+    margin: 10px;
+    width: 75%;
+  }
+}
 header .header__right #idTime {
   margin-left: 15px;
   border: none;
@@ -112,6 +160,12 @@ header .header__right #idTime {
   width: 44%;
   text-align: center;
   padding: 15px 0px;
+}
+@media (max-width: 1511px) {
+  header .header__right #idTime {
+    margin: 10px;
+    width: 60%;
+  }
 }
 
 .button {
@@ -132,6 +186,11 @@ header .header__right #idTime {
   float: right;
   margin-top: 15px;
   border: 2px solid white;
+}
+@media (max-width: 1124px) {
+  .button {
+    margin-top: 0px;
+  }
 }
 
 .button, .button__icon, .button__text {
@@ -201,17 +260,21 @@ header .header__right #idTime {
   align-items: center;
   justify-content: center;
   width: 100%;
-<<<<<<< HEAD
   height: 700px;
-=======
-  height: 800px;
   /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
   /* Masquer les barres de défilement sur Firefox */
   /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
   /* Masquer les barres de défilement sur Firefox */
   /* Masquer les barres de défilement sur les navigateurs basés sur WebKit */
   /* Masquer les barres de défilement sur Firefox */
->>>>>>> jeremy
+}
+@media (max-width: 1100px) {
+  .list {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
 }
 .list .toDo {
   display: flex;
@@ -225,6 +288,11 @@ header .header__right #idTime {
   border-radius: 15px;
   overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
+}
+@media (max-width: 1100px) {
+  .list .toDo {
+    width: 60%;
+  }
 }
 .list .toDo::-webkit-scrollbar {
   width: 0.5em;
@@ -297,6 +365,11 @@ header .header__right #idTime {
   overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
 }
+@media (max-width: 1100px) {
+  .list .doing {
+    width: 60%;
+  }
+}
 .list .doing::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -367,6 +440,11 @@ header .header__right #idTime {
   border-radius: 15px;
   overflow: hidden; /* Utilisez 'hidden' pour masquer les barres de défilement */
   height: 600px;
+}
+@media (max-width: 1100px) {
+  .list .done {
+    width: 60%;
+  }
 }
 .list .done::-webkit-scrollbar {
   width: 0.5em;
